@@ -1,0 +1,92 @@
+/* pages/videoinf/videoinf.wxss */
+page{
+    background-color:  #191E2A;
+    padding: 0;
+  }
+#myVideo{
+    width: 100%;
+    height: 420rpx;
+}
+video {
+    line-height: 0;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+.topvideo .title {
+    margin-top: 15rpx;
+    width: 100%;
+    font-size: 35rpx;
+    height: 60rpx;
+    font-family: MicroSoft Yahei;
+    color:#fff;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    border-bottom:1px solid #5D6169;
+}
+.content {
+    margin-top: 30rpx;
+    width: 100%;
+    overflow:hidden;
+    white-space:nowrap;
+}
+#content-top{
+    margin-left: 30rpx;
+    color: #fff
+}
+.content-list {
+    width: 100%;
+    height:430rpx;
+    overflow: hidden;
+    padding: 20rpx;
+    white-space: nowrap;
+    text-align: center
+}
+.img{
+    width: 300rpx;
+    height: 330rpx;
+    margin-right: 23rpx;
+    display: inline-block;
+}
+.videolist{
+    width: 300rpx;
+    height: 230rpx;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+}
+.content-title {
+    padding-top: 230rpx;
+}
+.videolist text{
+    word-wrap: break-word;
+    display: flex;
+    position: absolute;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 100rpx;
+    width: 300rpx;
+  }
+.videolist .btn {
+    margin-top: 90rpx;
+    position: absolute;
+    width: 50rpx;
+    height: 50rpx;
+    background-size:45rpx;
+    background-image:url(http://i.gtimg.cn/qqlive/images/20150911/i1441959133_1.jpg);
+    background-repeat: no-repeat; 
+  }

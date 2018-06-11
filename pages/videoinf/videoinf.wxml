@@ -1,0 +1,29 @@
+<!--pages/videoinf/videoinf.wxml-->
+<view class="container">
+    <view class="topvideo">
+        <video id="myVideo" src="{{video.url}}" controls autoplay></video>
+        <view class="title">{{video.title}}</view>
+    </view>
+    <view class="content">
+        <text id="content-top">相关推荐</text>
+        <view class="content-list">
+        <scroll-view scroll-x="true" style="overflow:hidden;">
+            <navigator url="/pages/videoinf/videoinf?id={{item.id}}&url={{item.url}}&title={{item.title}}" class="img" wx:for="{{videos}}"  wx:key="{{index}}" >
+            <view class="videolist" style="background-image:url({{item.bgimg}})" mode="aspectFill"> 
+                
+            <block wx:if="{{video.title == item.title}}">
+                <view class="btn" style="display: none;"></view>
+                <text class="content-title " style="white-space: normal;color: #42F32F;">{{item.title}}</text> 
+            </block>
+            <block wx:else>
+                    <view class="btn" ></view>
+                    <text class="content-title" style="white-space: normal;">{{item.title}}</text> 
+                </block>
+            
+        </view>
+
+            </navigator>     
+        </scroll-view>    
+      </view>    
+    </view>
+</view>
