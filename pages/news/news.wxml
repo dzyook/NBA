@@ -1,0 +1,33 @@
+<!--pages/news/news.wxml-->
+<scroll-view scroll-y="true" scroll-top="{{ scrollTop }}" enable-back-to-top="true" class="root-wrap">
+  <view class="wrapper">
+    <view class="info">
+      <view class="info-title">{{ new.title }}</view>
+      <view class="info-desc cf">
+        <text class="info-desc-author fl">{{ new.from }}</text>
+      </view>
+      <view class="info-line under-line"></view>
+    </view>
+
+    <view class="content">
+      <view class="image">
+        <image src="{{new.image}}"></image>
+      </view>
+      <view class="text">
+        <text decode="{{true}}" space="{{true}}">{{new.content}}</text>
+      </view>
+
+    </view>
+    <view class="footbar">
+      <form>
+        <button class="footbar-back clearBtnDefault" bindtap="back">
+          <view class="icon footbar-back-icon"></view>
+        </button>
+        <button class="footbar-btn clearBtnDefault" bindtap="next">下一篇</button>
+        <button class="footbar-share clearBtnDefault" open-type="share">
+          <view class="icon footbar-share-icon"></view>
+        </button>
+      </form>
+    </view>
+  </view>
+</scroll-view>
