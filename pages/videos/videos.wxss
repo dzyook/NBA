@@ -1,0 +1,49 @@
+page{
+  background-color:  #191E2A;
+  padding: 0;
+}
+.section{
+  display: inline-block;
+  width: 750rpx;
+  height: 100%;
+}
+.bigvideo {
+  margin-left:30rpx;
+  margin-top: 30rpx;
+  float: left;
+  width: 330rpx;
+  height: 400rpx;
+  overflow: hidden;
+}
+.myVideo {
+  width: 330rpx;
+  height: 280rpx;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.myVideo .btn {
+  width: 55rpx;
+  height: 55rpx;
+  background-size:45rpx;
+  background-image:url(http://i.gtimg.cn/qqlive/images/20150911/i1441959133_1.jpg);
+  background-repeat: no-repeat; 
+}
+.bigvideo text{
+  margin-left: 15rpx;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 100rpx;
+  width: 300rpx;
+}

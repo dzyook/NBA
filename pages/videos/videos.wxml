@@ -1,0 +1,12 @@
+<view class="section tc">
+        <navigator url="/pages/videoinf/videoinf?id={{item.id}}&url={{item.url}}&title={{item.title}}&num={{item.num}}}}" wx:for="{{videos}}" wx:key="{{item.id}}"  class="bigvideo">
+    <view class="myVideo" style="background-image:url({{item.bgimg}})">
+        <view class="btn"></view>
+    </view>
+  <text class="title">{{item.title}}</text>
+  </navigator>
+  </view> 
+  <view class="bottom {{hide?'hide':''}}">
+      <tetx>暂无更多视频了哦</tetx>
+  </view>
+  
