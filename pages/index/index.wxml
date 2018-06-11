@@ -1,0 +1,59 @@
+<!--index.wxml-->
+
+<view class="container">
+    <view class="top">
+    <view class="topimg">
+        <image src="../../images/indextop/1.jpg"></image>
+    </view>
+    <view class="agenda">
+        <view class="date">
+            <view class="dateLeft" bindtap="turnleft">
+                <image src="{{showLeft?'../../images/indextop/left.png':'../../images/indextop/left1.png'}}"></image>
+            </view>
+            <swiper autoplay="{{autoplay}}" current="{{current}}" interval="{{interval}}" bindchange="swiperchange">
+                    <block wx:for="{{date}}" wx:key="{{index}}">
+                      <swiper-item >
+                        <text class="time">{{item.time}}</text>
+                      </swiper-item>
+                    </block>
+                  </swiper>                  
+            <view class="dateRight" bindtap="turnright">
+                <image src="{{showRight?'../../images/indextop/right.png':'../../images/indextop/right1.png'}}"></image>
+            </view>
+        </view>
+         <!-- wx:for="{{agenda}}" wx:key="{{index}}"  -->
+             <view class="agenda-grade" >
+                <view class="leftteam"><image src="{{agenda.leftteam}}"></image>
+                <text>{{agenda.leftname}}</text>
+                </view>
+                <view class="leftgrade {{light==1?'on':''}}">{{agenda.leftgrade}}</view>
+                <view class="Mid">-</view>
+                <view class="rightgrade {{light==1?'':'on'}}">{{agenda.rightgrade}}</view>
+                <view class="rightteam"><image src="{{agenda.rightteam}}"></image>
+                <text>{{agenda.rightname}}</text>
+                </view>
+            </view> 
+    </view>
+    </view>
+    <view class="content">
+        <view class="content-top"><text>热门新闻</text></view>
+        <scroll-view scroll-y="true"  bindscrolltolower="loadMore">
+            <view class="scroll-y">
+                <navigator url="/pages/news/news?id={{ item.contentId}}&title={{item.title}}&from={{item.from}}&image={{item.image}}&content={{item.content}}" wx:for="{{news}}" wx:key="{{item.contentId}}" class="scroll-list">
+                    <view class="scroll-list-after">
+                    <view class="content-title">
+                        <text>{{item.title}}</text>
+                        <view class="from">
+                        <p>{{item.from}}</p></view>
+                    </view>
+                    <image class="content-img" src="{{item.image}}"></image>
+                    </view>
+                </navigator>  
+            </view>
+            <view class="bottom {{hide?'hide':''}}">
+            <tetx>暂无更多新闻了哦</tetx>
+        </view>
+        </scroll-view>
+    </view>
+    
+</view>
