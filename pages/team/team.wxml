@@ -1,0 +1,116 @@
+<!--pages/team/team.wxml-->
+<view class="container">
+    <view class="bigbox">
+    <view class="topp">
+        <view class="topp-title">
+            <view class="left {{click==1?'click':''}}" bindtap="east">西部排名</view>
+            <view class="center {{click==2?'click':''}}" bindtap="west">东部排名</view>
+            <view class="right {{click==3?'click':''}}" bindtap="datacoll">数据排行</view>
+        </view>
+    </view></view>
+    <block wx:if="{{click==1}}">
+    <view class="top toptop">
+        <text id="top-title">西部排名</text>
+        <text>胜/负</text>
+        <text>胜负差</text>
+        <text>胜率%</text>
+        <text>连胜/负</text>
+    </view>
+    <scroll-view  scroll-y="true">
+        <view  class="scroll-y">
+            <view wx:for="{{westteam}}"
+              wx:key="{{item.id}}"
+                class="scroll-list">
+                <view class="scroll-list-after">
+                    <text id="num">{{item.num}}</text>
+                    <view class="content-title">
+                        <view class="from">
+                            <image id="team" src="{{item.imgteam}}"></image>
+                            <p>{{item.team}}</p>
+                        </view>
+                    </view>
+                    <text id="score">{{item.record}}</text>
+                    <text id="score" class="grade">{{item.grade}}</text>
+                    <text id="score" class="winrate">{{item.winrate}}</text>
+                    <text id="score">{{item.score}}</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view></block>
+    <block wx:if="{{click==2}}">
+            <view class="top toptop">
+                    <text id="top-title">东部排名</text>
+                    <text>胜/负</text>
+                    <text>胜负差</text>
+                    <text>胜率%</text>
+                    <text>连胜/负</text>
+                </view>
+    <scroll-view    scroll-y="true">
+        <view class="scroll-y">
+            <view url="/pages/teaminf/teaminf?id={{item.Id}}" wx:for="{{eastteam}}"
+              wx:key="{{item.id}}"
+                class="scroll-list">
+                <view class="scroll-list-after">
+                    <text id="num">{{item.num}}</text>
+                    <view class="content-title">
+                        <view class="from">
+                            <image id="team" src="{{item.imgteam}}"></image>
+                            <p>{{item.team}}</p>
+                        </view>
+                    </view>
+                    <text id="score">{{item.record}}</text>
+                    <text id="score" class="grade">{{item.grade}}</text>
+                    <text id="score" class="winrate">{{item.winrate}}</text>
+                    <text id="score">{{item.score}}</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view></block>
+    <block wx:if="{{click==3}}">
+            <view class="top">
+                    <text id="top-title">得分榜</text>
+                    <text class="top-title-score">场均得分</text>
+                </view>
+                <scroll-view scroll-y="true">
+                    <view class="scroll-y">
+                        <view url="/pages/teaminf/teaminf?id={{item.id}}" wx:for="{{team1}}" wx:if="{{index<playernum}}" wx:key="{{item.id}}" class="scroll-list">    
+                            <view class="scroll-list-after">
+                            <text id="num">{{item.num}}</text>
+                            <view class="content-title">
+                                <view class="from">
+                                    <image id="team" src="{{item.imgteam}}"></image>
+                                <p>{{item.team}}</p></view>
+                            </view>
+                            <text id="score" class="lastscore">{{item.score}}</text>
+                            </view>
+                        </view>
+                        <view class="more" bindtap="showmore">
+                                <text>{{canshow?'完整得分榜∨':'收起∧'}}</text>
+                            </view>
+                    </view>
+                    </scroll-view>
+                
+                    <view class="top topmo">
+                            <text id="top-title">失分榜</text>
+                            <text class="top-title-score">场均失分</text>
+                        </view>
+                    <scroll-view scroll-y="true">
+                            <view class="scroll-y">
+                                <view wx:for="{{team1}}" wx:if="{{index<playernum2}}" wx:key="{{item.id}}" class="scroll-list">    
+                                    <view class="scroll-list-after">
+                                    <text id="num">{{item.num}}</text>
+                                    <view class="content-title">
+                                        <view class="from">
+                                            <image id="team" src="{{item.imgteam}}"></image>
+                                        <p>{{item.team}}</p></view>
+                                    </view>
+                                    <text id="score" class="lastscore">{{item.score}}</text>
+                                    </view>
+                                </view>
+                                <view class="more" bindtap="showmore2">
+                                        <text>{{canshow2?'完整失分榜∨':'收起∧'}}</text>
+                                    </view>
+                            </view>
+                            </scroll-view>
+    </block>
+</view>
