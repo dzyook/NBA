@@ -1,0 +1,58 @@
+<!--pages/player/player.wxml-->
+<view class="container">
+    <view class="top">
+        <text id="top-title">得分榜</text>
+        <text>场均得分</text>
+    </view>
+    <scroll-view scroll-y="true">
+        <view class="scroll-y">
+            <view wx:for="{{player1}}" wx:if="{{index<playernum}}" wx:key="{{item.name}}" class="scroll-list">
+                <view class="scroll-list-after">
+                    <text id="num">{{item.num}}</text>
+                    <view class="content-img">
+                        <image class="content-img" src="{{item.image}}"></image>
+                    </view>
+                    <view class="content-title">
+                        <text>{{item.name}}</text>
+                        <view class="from">
+                            <image id="team" src="{{item.imgteam}}"></image>
+                            <p>{{item.team}}</p>
+                        </view>
+                    </view>
+                    <text id="score">{{item.score}}</text>
+                </view>
+            </view>
+            <view class="more" bindtap="showmore">
+                <text>{{canshow?'完整得分榜∨':'收起∧'}}</text>
+            </view>
+        </view>
+    </scroll-view>
+
+    <view class="top toptop">
+        <text id="top-title">助攻榜</text>
+        <text>场均助攻</text>
+    </view>
+    <scroll-view scroll-y="true">
+        <view class="scroll-y">
+            <view wx:for="{{player2}}" wx:if="{{index<playernum2}}" wx:key="{{item.id}}" class="scroll-list">
+                <view class="scroll-list-after">
+                    <text id="num">{{item.num}}</text>
+                    <view class="content-img">
+                        <image class="content-img" src="{{item.image}}"></image>
+                    </view>
+                    <view class="content-title">
+                        <text>{{item.name}}</text>
+                        <view class="from">
+                            <image id="team" src="{{item.imgteam}}"></image>
+                            <p>{{item.team}}</p>
+                        </view>
+                    </view>
+                    <text id="score">{{item.score}}</text>
+                </view>
+            </view>
+            <view class="more" bindtap="showmore2">
+                <text>{{canshow2?'完整助攻榜∨':'收起∧'}}</text>
+            </view>
+        </view>
+    </scroll-view>
+</view>

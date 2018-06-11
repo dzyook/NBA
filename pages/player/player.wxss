@@ -1,0 +1,126 @@
+/* pages/player/player.wxss */
+page,.container {
+    padding: 0;
+    background-color: #010714;
+}
+.top {
+    position: relative;
+    height: 80rpx;
+    background-color: #191E2A;
+    color:#7C7F86; 
+    font-size: 26rpx;
+    line-height: 80rpx;
+  }
+.top text {
+    float: right;
+    padding-right:90rpx; 
+}
+#top-title {
+    padding-left: 30rpx;
+    float: left;
+    font-size: 30rpx;
+    color: #fff;
+}
+.top::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1rpx;
+    color: #272C37;
+    border-bottom:1px solid #272C37;
+  }
+.scroll-y {
+    color: #7C7F86;
+    background-color: #191E2A;
+}
+.scoll-list {
+    width: 750rpx;
+    display: flex;
+    
+}
+.scroll-list-after {
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    position: relative;
+    display: flex;
+    height: 130rpx;
+  }
+.scroll-y {
+    overflow: hidden;
+}
+#num,#score {
+    width: 50rpx;
+    height: 130rpx;
+    line-height: 130rpx;
+}
+#score {
+    display: flex;
+    padding-left: 120rpx;
+    color: #fff;
+    width: 100rpx;
+    float: right;
+}
+.content-title {
+    margin-left: 70rpx; 
+    width: 200rpx;
+    height: 130rpx;
+}
+.content-title text{
+    display: flex;
+    padding-top: 30rpx;
+    font-size: 32rpx;
+    color: #fff;
+}
+.content-img {
+    margin-left: 10rpx;
+    width: 100rpx;
+    height: 125rpx;
+    margin-bottom: 5rpx;
+}
+
+.from {
+    display: flex;
+    font-size: 26rpx;
+    width: 150rpx;
+    height: 55rpx;
+    margin-top: 10rpx;
+}
+.from image {
+    width: 40rpx;
+    height: 40rpx;
+}
+.from p {
+    margin-left: 10rpx;
+}
+.scroll-list-after::before {
+    /* margin-top: 20rpx; */
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1rpx;
+    color: #272C37;
+    border-top:1px solid #272C37;
+  }
+.more {
+    position: relative;
+    height: 100rpx;
+    font-size: 38rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 100rpx;
+    background-color: #191E2A;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+.more.show {
+    display: none;
+}
+
+.toptop {
+    margin-top: 10rpx;
+}
