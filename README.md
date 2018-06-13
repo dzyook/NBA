@@ -1,6 +1,6 @@
 ## 这是一个NBA资讯微信小程序
 有兴趣可以加我qq:1404827307  
-
+微信:dzy1404827307
 或发邮件联系我1404827307@qq.com  
  
 一起讨论学习~
@@ -13,5 +13,5 @@
 
 ![](https://user-gold-cdn.xitu.io/2018/6/6/163d32961e07c1a1?w=280&h=480&f=gif&s=5205765)
 
-详情可以看看[掘金文章](https://juejin.im/editor/posts/5b169ee56fb9a01e813869ac)
+详情可以看看[掘金文章](https://juejin.im/post/5b1e3c3f518825137478a20e)
 
